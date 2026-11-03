@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perpustakaan Kelas - Pengembalian / Laporan</title>
+  <link rel="stylesheet" href="pengembalian.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    
+    <!-- Sidebar Navigasi -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="icon">📖</span>
+        <span class="brand-text">Perpustakaan Kelas</span>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="dasboard.html" class="nav-item">
+          <span class="icon">🏠</span> Dashboard
+        </a>
+        <a href="databuku.html" class="nav-item">
+          <span class="icon">📖</span> Data Buku
+        </a>
+        <a href="daftaranggota.html" class="nav-item">
+          <span class="icon">👥</span> Data Anggota
+        </a>
+        <a href="peminjaman.html" class="nav-item">
+          <span class="icon">➡️</span> Peminjaman
+        </a>
+        <a href="pengembalian.html" class="nav-item active">
+          <span class="icon">↺</span> Pengembalian
+        </a>
+        <a href="laporan.html" class="nav-item">
+          <span class="icon">📄</span> Laporan
+        </a>
+        
+        <!-- Menu Logout -->
+        <a href="login.html" class="nav-item nav-logout" id="sidebarLogout">
+          <span class="icon">🚪</span> Logout
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Area Konten Utama -->
+    <main class="main-content">
+      
+      <!-- Header & User Profile -->
+      <header class="content-header">
+        <div class="header-title">
+          <h2>Pengembalian</h2>
+        </div>
+        
+        <div class="user-profile-container">
+          <div class="user-profile" id="userProfileBtn">
+            <span class="icon">👤</span> Petugas <span class="arrow-down">▾</span>
+          </div>
+          <div class="profile-dropdown hidden" id="profileDropdown">
+            <a href="#" id="dropdownLogout" class="dropdown-item danger">
+              <span class="icon">🚪</span> Logout
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Action Bar: Tombol Tandai Dikembalikan & Filter Periode -->
+      <div class="action-bar-right">
+        <button class="btn-primary" id="btnTandaiDikembalikan">
+          <span class="btn-icon">🔄</span> Tandai Dikembalikan
+        </button>
+        <button class="btn-outline" id="btnFilterPeriode">
+          <span class="btn-icon">📅</span> Filter Periode
+        </button>
+      </div>
+
+      <!-- Card Tabel Pengembalian / Laporan -->
+      <section class="table-card">
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Anggota</th>
+                <th>Judul Buku</th>
+                <th>Jatuh Tempo</th>
+                <th>Tanggal Kembali</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="laporanTableBody">
+              <!-- Data dimasukkan secara dinamis oleh JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="pengembalian.js"></script>
+</body>
+</html>

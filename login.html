@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perpustakaan Kelas - Registrasi & Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <div class="browser-frame">
+
+    <!-- Konten Form -->
+    <div class="content-area">
+      <div class="card">
+        <!-- Logo -->
+        <div class="logo-circle">
+          <span class="logo-icon">📖</span>
+        </div>
+
+        <!-- Judul -->
+        <h1 class="app-title">Perpustakaan Kelas</h1>
+
+        <!-- Form Login -->
+        <form id="loginForm">
+          <div class="input-group">
+            <span class="input-icon">👤</span>
+            <input type="text" class="form-input" placeholder="Username Admin" required>
+          </div>
+
+          <div class="input-group">
+            <span class="input-icon">🔒</span>
+            <input type="password" class="form-input" placeholder="Password" required>
+          </div>
+
+          <button type="submit" class="btn-submit">Masuk</button>
+
+          <div class="divider"></div>
+
+        </form>
+
+        <!-- Form Registrasi (Default Tersembunyi) -->
+        <form id="registerForm" class="hidden">
+          <div class="input-group">
+            <span class="input-icon">👤</span>
+            <input type="text" class="form-input" placeholder="Username Baru" required>
+          </div>
+
+          <div class="input-group">
+            <span class="input-icon">🔒</span>
+            <input type="password" class="form-input" placeholder="Password" required>
+          </div>
+
+          <button type="submit" class="btn-submit">Daftar</button>
+
+          <div class="divider"></div>
+
+          <a href="#" class="toggle-link" id="toLogin">Sudah punya akun? Masuk</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
