@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initLogoutEvents();
 });
 
-// Mengatur nilai default tanggal pinjam (hari ini) & jatuh tempo (7 hari setelahnya)
 function setDefaultDates() {
   const tglPinjamInput = document.getElementById("tglPinjam");
   const tglJatuhTempoInput = document.getElementById("tglJatuhTempo");
@@ -24,7 +23,6 @@ function formatDateForInput(date) {
   return `${yyyy}-${mm}-${dd}`;
 }
 
-// Handler Submit Form Peminjaman
 function initFormHandler() {
   const form = document.getElementById("peminjamanForm");
   const totalPeminjamanEl = document.getElementById("totalPeminjaman");
@@ -44,7 +42,6 @@ function initFormHandler() {
       return;
     }
 
-    // Update Counter Ringkasan Peminjaman
     count++;
     totalPeminjamanEl.innerText = count;
     bukuDipinjamEl.innerText = count;
@@ -52,13 +49,11 @@ function initFormHandler() {
 
     alert("Transaksi peminjaman berhasil disimpan!");
     
-    // Reset Form Pilihan
     document.getElementById("pilihAnggota").selectedIndex = 0;
     document.getElementById("pilihBuku").selectedIndex = 0;
   });
 }
 
-// Toggle Profil Dropdown
 function initProfileDropdown() {
   const btn = document.getElementById("userProfileBtn");
   const dropdown = document.getElementById("profileDropdown");
@@ -73,7 +68,6 @@ function initProfileDropdown() {
   });
 }
 
-// Handler Logout
 function initLogoutEvents() {
   const handleLogout = (e) => {
     e.preventDefault();
