@@ -10,7 +10,6 @@
 
   <div class="app-layout">
     
-    <!-- Sidebar Navigasi Full Height -->
     <aside class="sidebar">
       <div class="brand">
         <span class="icon">📖</span>
@@ -37,21 +36,17 @@
           <span class="icon">📄</span> Laporan
         </a>
         
-        <!-- Menu Logout di Sidebar -->
         <a href="ProyekloginPBL.html" class="nav-item nav-logout" id="sidebarLogout">
           <span class="icon">🚪</span> Logout
         </a>
       </nav>
     </aside>
 
-    <!-- Area Konten Utama -->
     <main class="main-content">
       
-      <!-- Header Atas Dashboard -->
       <header class="content-header">
         <h2>Dashboard</h2>
         
-        <!-- Dropdown Profile Petugas -->
         <div class="user-profile-container">
           <div class="user-profile" id="userProfileBtn">
             <span class="icon">👤</span> Petugas <span class="arrow-down">▾</span>
@@ -64,7 +59,6 @@
         </div>
       </header>
 
-      <!-- Grid Kartu Statistik -->
       <section class="stats-grid">
         <div class="stat-card">
           <div class="stat-icon">📖</div>
@@ -91,7 +85,6 @@
         </div>
       </section>
 
-      <!-- Card Tabel Peminjaman Terbaru -->
       <section class="table-card">
         <h3 class="table-title">Peminjaman Terbaru</h3>
         <div class="table-responsive">
@@ -105,9 +98,7 @@
                 <th>Status</th>
               </tr>
             </thead>
-            <tbody id="peminjamanTableBody">
-              <!-- Data dimasukkan secara dinamis oleh JavaScript -->
-            </tbody>
+            <tbody id="peminjamanTableBody"></tbody>
           </table>
         </div>
       </section>
