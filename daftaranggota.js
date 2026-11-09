@@ -1,4 +1,3 @@
-// Initial Data Anggota sesuai gambar[cite: 4]
 let anggotaData = [
   { id: "A001", nama: "Andi Pratama", kelas: "X TKJ 1", nohp: "081234567890" },
   { id: "A002", nama: "Siti Nurhaliza", kelas: "X MM 1", nohp: "081298765432" },
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initLogoutEvents();
 });
 
-// Render Data Tabel Anggota
 function renderTable(data) {
   const tableBody = document.getElementById("anggotaTableBody");
   tableBody.innerHTML = "";
@@ -45,7 +43,6 @@ function renderTable(data) {
   });
 }
 
-// Fungsi Filter Pencarian Live (Berdasarkan Nama, ID, atau Kelas)
 function initSearch() {
   const searchInput = document.getElementById("searchInput");
   searchInput.addEventListener("input", (e) => {
@@ -59,7 +56,6 @@ function initSearch() {
   });
 }
 
-// Handler Modal Tambah & Edit Anggota
 function initModal() {
   const modal = document.getElementById("anggotaModal");
   const btnTambah = document.getElementById("btnTambahAnggota");
@@ -101,7 +97,6 @@ function initModal() {
   });
 }
 
-// Fungsi Edit Anggota
 function editAnggota(id) {
   const anggota = anggotaData.find(a => a.id === id);
   if (!anggota) return;
@@ -117,7 +112,6 @@ function editAnggota(id) {
   document.getElementById("anggotaModal").classList.remove("hidden");
 }
 
-// Fungsi Hapus Anggota
 function hapusAnggota(id) {
   if (confirm(`Apakah Anda yakin ingin menghapus anggota dengan ID ${id}?`)) {
     anggotaData = anggotaData.filter(a => a.id !== id);
@@ -125,7 +119,6 @@ function hapusAnggota(id) {
   }
 }
 
-// Toggle Profil Dropdown
 function initProfileDropdown() {
   const btn = document.getElementById("userProfileBtn");
   const dropdown = document.getElementById("profileDropdown");
@@ -140,7 +133,6 @@ function initProfileDropdown() {
   });
 }
 
-// Handler Logout
 function initLogoutEvents() {
   const handleLogout = (e) => {
     e.preventDefault();
