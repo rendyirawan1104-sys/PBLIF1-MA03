@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initLogoutEvents();
 });
 
-// Handler Tombol Filter Periode
 function initFilterPeriode() {
   const btnFilter = document.getElementById("btnFilterPeriode");
 
@@ -16,7 +15,6 @@ function initFilterPeriode() {
   });
 }
 
-// Toggle Profil Dropdown
 function initProfileDropdown() {
   const btn = document.getElementById("userProfileBtn");
   const dropdown = document.getElementById("profileDropdown");
@@ -31,7 +29,6 @@ function initProfileDropdown() {
   });
 }
 
-// Handler Logout
 function initLogoutEvents() {
   const handleLogout = (e) => {
     e.preventDefault();
