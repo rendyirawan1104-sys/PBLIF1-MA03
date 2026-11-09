@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initLogoutEvents();
 });
 
-// Render Data Tabel Buku
 function renderTable(data) {
   const tableBody = document.getElementById("bukuTableBody");
   tableBody.innerHTML = "";
@@ -45,7 +44,6 @@ function renderTable(data) {
   });
 }
 
-// Fungsi Filter Pencarian Live
 function initSearch() {
   const searchInput = document.getElementById("searchInput");
   searchInput.addEventListener("input", (e) => {
@@ -59,7 +57,6 @@ function initSearch() {
   });
 }
 
-// Handler Modal Tambah & Edit Buku
 function initModal() {
   const modal = document.getElementById("bukuModal");
   const btnTambah = document.getElementById("btnTambahBuku");
@@ -86,7 +83,6 @@ function initModal() {
     const stok = parseInt(document.getElementById("stokBuku").value);
 
     if (editKodeTarget) {
-      // Logic Update Data
       const index = bukuData.findIndex(b => b.kode === editKodeTarget);
       if (index !== -1) {
         bukuData[index] = { kode, judul, penulis, stok };
@@ -101,7 +97,6 @@ function initModal() {
   });
 }
 
-// Fungsi Edit Buku
 function editBuku(kode) {
   const buku = bukuData.find(b => b.kode === kode);
   if (!buku) return;
@@ -117,7 +112,6 @@ function editBuku(kode) {
   document.getElementById("bukuModal").classList.remove("hidden");
 }
 
-// Fungsi Hapus Buku
 function hapusBuku(kode) {
   if (confirm(`Apakah Anda yakin ingin menghapus buku dengan kode ${kode}?`)) {
     bukuData = bukuData.filter(b => b.kode !== kode);
@@ -125,7 +119,6 @@ function hapusBuku(kode) {
   }
 }
 
-// Toggle Profil Dropdown
 function initProfileDropdown() {
   const btn = document.getElementById("userProfileBtn");
   const dropdown = document.getElementById("profileDropdown");
@@ -140,7 +133,6 @@ function initProfileDropdown() {
   });
 }
 
-// Handler Logout
 function initLogoutEvents() {
   const handleLogout = (e) => {
     e.preventDefault();
