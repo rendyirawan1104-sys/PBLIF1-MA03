@@ -1,4 +1,3 @@
-// Initial Data Pengembalian / Laporan sesuai gambar[cite: 6]
 let laporanData = [
   { anggota: "Andi Pratama", judul: "Laskar Pelangi", jatuhTempo: "17/10/2026", tglKembali: "-", status: "Dipinjam" },
   { anggota: "Siti Nurhaliza", judul: "Bumi Manusia", jatuhTempo: "16/10/2026", tglKembali: "-", status: "Dipinjam" },
@@ -14,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initLogoutEvents();
 });
 
-// Render Data Tabel Laporan / Pengembalian[cite: 6]
 function renderTable() {
   const tableBody = document.getElementById("laporanTableBody");
   tableBody.innerHTML = "";
@@ -22,7 +20,6 @@ function renderTable() {
   laporanData.forEach((item, index) => {
     const row = document.createElement("tr");
 
-    // Menentukan Class Badge[cite: 6]
     const badgeClass = item.status === "Dikembalikan" ? "badge-dikembalikan" : "badge-dipinjam";
 
     row.innerHTML = `
@@ -37,12 +34,10 @@ function renderTable() {
   });
 }
 
-// Inisialisasi Tombol Aksi
 function initActionButtons() {
   const btnTandai = document.getElementById("btnTandaiDikembalikan");
   const btnFilter = document.getElementById("btnFilterPeriode");
 
-  // Handler Tandai Dikembalikan untuk data pertama yang masih Dipinjam
   btnTandai.addEventListener("click", () => {
     const itemDipinjam = laporanData.find(item => item.status === "Dipinjam");
     
@@ -56,13 +51,11 @@ function initActionButtons() {
     }
   });
 
-  // Handler Filter Periode
   btnFilter.addEventListener("click", () => {
     alert("Fitur Filter Periode akan menampilkan dialog pemfilteran tanggal.");
   });
 }
 
-// Toggle Profil Dropdown
 function initProfileDropdown() {
   const btn = document.getElementById("userProfileBtn");
   const dropdown = document.getElementById("profileDropdown");
@@ -77,7 +70,6 @@ function initProfileDropdown() {
   });
 }
 
-// Handler Logout
 function initLogoutEvents() {
   const handleLogout = (e) => {
     e.preventDefault();
