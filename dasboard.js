@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initLogoutEvents();
 });
 
-// Render Data Tabel Peminjaman
 function renderTable() {
   const tableBody = document.getElementById("peminjamanTableBody");
   tableBody.innerHTML = "";
@@ -32,7 +31,6 @@ function renderTable() {
   });
 }
 
-// Toggle Profil Dropdown
 function initProfileDropdown() {
      const navItems = document.querySelectorAll(".nav-item:not(.nav-logout)");
 
@@ -51,20 +49,17 @@ function initProfileDropdown() {
     dropdown.classList.toggle("hidden");
   });
 
-  // Tutup dropdown jika klik di luar
   document.addEventListener("click", () => {
     dropdown.classList.add("hidden");
   });
 }
 
-// Handler Logout
 function initLogoutEvents() {
   const handleLogout = (e) => {
     e.preventDefault();
     const confirmLogout = confirm("Apakah Anda yakin ingin keluar dari sistem?");
     if (confirmLogout) {
       alert("Anda telah keluar.");
-      // Sesuaikan ke halaman login Anda jika diperlukan:
       window.location.href = "login.html"
     }
   };
