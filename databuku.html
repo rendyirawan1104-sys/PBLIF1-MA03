@@ -9,8 +9,6 @@
 <body>
 
   <div class="app-layout">
-    
-    <!-- Sidebar Navigasi -->
     <aside class="sidebar">
       <div class="brand">
         <span class="icon">📖</span>
@@ -37,17 +35,14 @@
           <span class="icon">📄</span> Laporan
         </a>
         
-        <!-- Menu Logout -->
         <a href="#" class="nav-item nav-logout" id="sidebarLogout">
           <span class="icon">🚪</span> Logout
         </a>
       </nav>
     </aside>
 
-    <!-- Area Konten Utama -->
     <main class="main-content">
       
-      <!-- Header Dashboard & User Profile -->
       <header class="content-header">
         <div class="header-title">
           <h2>Data Buku</h2>
@@ -66,7 +61,6 @@
         </div>
       </header>
 
-      <!-- Bar Inisiasi: Search Bar & Tombol Tambah Buku -->
       <div class="action-bar">
         <div class="search-box">
           <span class="search-icon">🔍</span>
@@ -75,7 +69,6 @@
         <button class="btn-primary" id="btnTambahBuku">+ Tambah Buku</button>
       </div>
 
-      <!-- Table Card Data Buku -->
       <section class="table-card">
         <div class="table-responsive">
           <table>
@@ -88,9 +81,7 @@
                 <th>Aksi</th>
               </tr>
             </thead>
-            <tbody id="bukuTableBody">
-              <!-- Data buku dirender secara dinamis lewat JS -->
-            </tbody>
+            <tbody id="bukuTableBody"></tbody>
           </table>
         </div>
       </section>
@@ -99,7 +90,6 @@
 
   </div>
 
-  <!-- Modal Tambah/Edit Buku -->
   <div class="modal hidden" id="bukuModal">
     <div class="modal-content">
       <h3 id="modalTitle">Tambah Buku Baru</h3>
