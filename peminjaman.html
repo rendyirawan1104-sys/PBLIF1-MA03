@@ -10,7 +10,6 @@
 
   <div class="app-layout">
     
-    <!-- Sidebar Navigasi -->
     <aside class="sidebar">
       <div class="brand">
         <span class="icon">📖</span>
@@ -37,17 +36,14 @@
           <span class="icon">📄</span> Laporan
         </a>
         
-        <!-- Menu Logout -->
         <a href="login.html" class="nav-item nav-logout" id="sidebarLogout">
           <span class="icon">🚪</span> Logout
         </a>
       </nav>
     </aside>
 
-    <!-- Area Konten Utama -->
     <main class="main-content">
       
-      <!-- Header Transaksi Peminjaman & User Profile -->
       <header class="content-header">
         <div class="header-title">
           <h2>Transaksi Peminjaman</h2>
@@ -65,14 +61,12 @@
         </div>
       </header>
 
-      <!-- Form Peminjaman Buku Card -->
       <section class="card-container">
         <h3 class="card-title">Form Peminjaman Buku</h3>
         
         <form id="peminjamanForm">
           <div class="form-grid">
             
-            <!-- Pilih Anggota -->
             <div class="form-group">
               <label for="pilihAnggota">Pilih Anggota</label>
               <select id="pilihAnggota" required>
@@ -85,7 +79,6 @@
               </select>
             </div>
 
-            <!-- Pilih Buku -->
             <div class="form-group">
               <label for="pilihBuku">Pilih Buku</label>
               <select id="pilihBuku" required>
@@ -98,13 +91,11 @@
               </select>
             </div>
 
-            <!-- Tanggal Pinjam -->
             <div class="form-group">
               <label for="tglPinjam">Tanggal Pinjam</label>
               <input type="date" id="tglPinjam" required>
             </div>
 
-            <!-- Tanggal Jatuh Tempo -->
             <div class="form-group">
               <label for="tglJatuhTempo">Tanggal Jatuh Tempo</label>
               <input type="date" id="tglJatuhTempo" required>
@@ -112,14 +103,12 @@
 
           </div>
 
-          <!-- Tombol Simpan Peminjaman -->
           <button type="submit" class="btn-submit">
             <span class="btn-icon">💾</span> Simpan Peminjaman
           </button>
         </form>
       </section>
 
-      <!-- Ringkasan Peminjaman Card -->
       <section class="card-container summary-card">
         <h3 class="card-title">Ringkasan Peminjaman</h3>
         
